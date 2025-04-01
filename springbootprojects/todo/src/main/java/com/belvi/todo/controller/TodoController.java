@@ -20,8 +20,7 @@ public class TodoController {
         this.todoService = todoService;
     }
 
-    @Operation(summary = "Get all Todos", description = "Returns a list of all todo items")
-    @GetMapping("/public/todos")
+   
     public ResponseEntity<TodoResponse> getAllTodos() {
         TodoResponse todos = todoService.getAllTodos();
         return new ResponseEntity<>(todos, HttpStatus.OK);
